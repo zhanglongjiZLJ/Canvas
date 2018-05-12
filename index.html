@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--<meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">-->
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta charset="UTF-8">
+		<title>屋顶排布图</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/roof.css" />
+	</head>
+
+	<body>
+		<div class="roof-wrap">
+			<div class="roof-head">
+				<ul>
+					<li class="active">规则形状生成</li>
+					<li>手动排布</li>
+				</ul>
+			</div>
+			<div class="roof-content">
+				<!--三角形-->
+				<div class="roof-item roof-item1">
+					<div class="triangle type">
+						<input class="triangle-checked" type="checkbox" name="select" id="triangle" value="" /><label for="triangle">三角形</label><input class="roof-input san-xie" type="" name="" id="" value="" placeholder="斜边"/><input class="roof-input san-di" type="" name="" id="" value="" placeholder="底"/><img class="add" src="img/add.svg"/>
+					</div>
+				</div>
+				<!--三角形结束-->
+				<!--梯形-->
+				<div class="roof-item roof-item2">
+					<div class="trapezoid type">
+						<input class="triangle-checked" type="checkbox" name="select" id="trapezoid" value="" /><label for="trapezoid">梯形</label><input class="roof-input ti-top" type="" name="" id="" value="" placeholder="上底"/><input class="roof-input ti-bottom" type="" name="" id="" value="" placeholder="下底"/><input class="roof-input ti-xie" type="" name="" id="" value="" placeholder="斜边"/><img class="add" src="img/add.svg"/>
+					</div>
+				</div>
+				<!--梯形结束-->
+				<!--矩形-->
+				<div class="roof-item roof-item3">
+					<div class="rectangle type">
+						<input class="rectangle-checked" type="checkbox" name="select" id="rectangle" value="" /><label for="rectangle">矩形</label><input class="roof-input ju-width" type="" name="" id="" value="" placeholder="宽"/><input class="roof-input ju-height" type="" name="" id="" value="" placeholder="高"/><img class="add" src="img/add.svg"/>
+					</div>
+				</div>
+				<!--矩形结束-->
+				<p class=" explain">
+					说明 : 单位为米,输入正整数,三角形的底和矩形的宽为屋顶底边,梯形的下底必须大于上底.
+				</p>
+				<!--提交按钮-->
+				<button class="submit" id="down_button">
+					提交
+				</button>
+				<!--提交按钮结束-->
+				<!--排布图-->
+				<div class="paibu">
+					<nav>排布图</nav>
+					<!--canvas内容-->
+					<div class="canvas-content">
+					</div>
+					<!--canvas内容结束-->
+				</div>
+				<!--排布图结束-->
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="http://html2canvas.hertzen.com/build/html2canvas.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/roof.js" type="text/javascript" charset="utf-8"></script>
+</html>
